@@ -1,3 +1,5 @@
+
+
 body, html {
   padding-top:2.5em;
   margin:0;
@@ -154,6 +156,7 @@ body > div > article > div > section:last-child {
 }
 
 .content-cat {
+  font-weight: bold;
   font-family: "Merriweather";
   font-variant:small-caps;
   font-weight:300;
@@ -167,6 +170,7 @@ body > div > article > div > section:last-child {
   vertical-align:middle;
 
   padding-left:6.66%;
+  padding-right: 6.66%;
   width:30%;
 }
 
