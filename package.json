@@ -1,6 +1,6 @@
 {
   "name": "resume-theme-paper",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": "canner can",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -11,7 +11,8 @@
   },
   "keywords": [
     "canner-can",
-    "resume"
+    "resume",
+		"beta"
   ],
   "author": "ctxhou",
   "license": "MIT",
