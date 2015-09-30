@@ -5,7 +5,6 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, user-scalable=no, minimal-ui">
 
-	<title>{{#basics}}{{name}}{{/basics}}</title>
 	<link href='http://fonts.googleapis.com/css?family=Merriweather:400,300,700' rel='stylesheet' type='text/css'>
 	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600' rel='stylesheet' type='text/css'>
 
@@ -27,10 +26,14 @@
 			        </div>
 			        {{/if}}
 			        <div class="header-text">
-			          <p>
-			            {{basics.name}}
-			          </p>
-			          <p class="subtitle">{{basics.label}}</p>
+								{{#if basics.name}}
+				          <p>
+				            {{basics.name}}
+				          </p>
+								{{/if}}
+								{{#if basics.label}}
+			          	<p class="subtitle">{{basics.label}}</p>
+								{{/if}}
 			        </div>
 			      </div>
 			    </header>
@@ -148,7 +151,7 @@
 					            <p>
 					          {{/if}}
 					            	{{#if website}}
-										<strong>{{position}}</strong> at <strong><a href="{{website}}">{{company}}:</a></strong>
+													<strong>{{position}}</strong> at <strong><a href="{{website}}">{{company}}:</a></strong>
 												{{else}}
 					            		<strong>{{position}}</strong> at <strong>{{company}}:</strong>
 					            	{{/if}}
