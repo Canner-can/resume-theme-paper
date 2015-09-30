@@ -1,19 +1,19 @@
 <!doctype html>
 <html>
 	<head>
-	
+
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, user-scalable=no, minimal-ui">
-	
-	<title>{{#resume.basics}}{{name}}{{/resume.basics}}</title>
+
+	<title>{{#basics}}{{name}}{{/basics}}</title>
 	<link href='http://fonts.googleapis.com/css?family=Merriweather:400,300,700' rel='stylesheet' type='text/css'>
 	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600' rel='stylesheet' type='text/css'>
-	
+
 	<link href='./css/style.css' rel='stylesheet' type='text/css'>
 
 	<link rel="stylesheet" type="text/css" href="./css/print.css" media="print">
-	
-	
+
+
 	</head>
 	<body>
 
@@ -21,21 +21,21 @@
 		  <article class="paper">
 			    <header>
 			      <div class="header-content">
-			      	{{#if resume.basics.picture}}
+			      	{{#if basics.picture}}
 			        <div class="header-pic" title="Wiggle Wiggle">
-			          <img src="{{resume.basics.picture}}" class="pic" />
+			          <img src="{{basics.picture}}" class="pic" />
 			        </div>
 			        {{/if}}
 			        <div class="header-text">
 			          <p>
-			            {{resume.basics.name}}
+			            {{basics.name}}
 			          </p>
-			          <p class="subtitle">{{resume.basics.label}}</p>
+			          <p class="subtitle">{{basics.label}}</p>
 			        </div>
 			      </div>
 			    </header>
 			    <div class="content-wrapper">
-			    
+
 			      <!-- CONTACT -->
 			      <section class="content">
 			        <div class="row">
@@ -43,33 +43,33 @@
 			           聯絡資料
 			          </div>
 			          <div class="content-text">
-			          	{{#if resume.basics.website}}
+			          	{{#if basics.website}}
 				            <ul>
 				              <li>網站</li>
-				              <li>{{resume.basics.website}}</li>
+				              <li>{{basics.website}}</li>
 				            </ul>
 			            {{/if}}
 
-			            {{#if resume.basics.email}}
+			            {{#if basics.email}}
 				            <ul>
 				              <li>Email</li>
-				              <li>{{resume.basics.email}}</li>
+				              <li>{{basics.email}}</li>
 				            </ul>
 			            {{/if}}
 
-			            {{#if resume.basics.phone}}
+			            {{#if basics.phone}}
 				            <ul>
 				              <li>電話</li>
-				              <li>{{resume.basics.phone}}</li>
+				              <li>{{basics.phone}}</li>
 				            </ul>
 			            {{/if}}
 			          </div>
 			        </div>
 			      </section>
 
-						
+
 						<!-- LANGUAGE -->
-			      {{#if resume.languages.length}}
+			      {{#if languages.length}}
 			      <section class="content">
 			        <div class="row">
 			          <div class="content-cat">
@@ -77,16 +77,16 @@
 			          </div>
 			          <div class="content-text">
 
-			          	{{#each resume.languages}}
+			          	{{#each languages}}
 				            <ul>
-											
+
 											{{#if language}}
 				              	<li>{{language}}</li>
-											{{/if}}	
+											{{/if}}
 
 											{{#if fluency}}
 				              <li>{{fluency}}</li>
-											{{/if}}	
+											{{/if}}
 
 				            </ul>
 			            {{/each}}
@@ -97,7 +97,7 @@
 			      {{/if}}
 
 			      <!-- PROFILES -->
-			      {{#if resume.basics.profiles.length}}
+			      {{#if basics.profiles.length}}
 				      <section class="content profiles">
 				        <div class="row">
 				          <div class="content-cat">
@@ -120,8 +120,8 @@
 				      </section>
 			      {{/if}}
 
-					{{#if resume.work.length}}
-						{{#each resume.work}}
+					{{#if work.length}}
+						{{#each work}}
 						{{#if $first}}
 								<section class="content">
 						{{else}}
@@ -132,10 +132,10 @@
 			          	{{#if $first}}
 											工作經驗
 			          	{{/if}}
-			          
+
 								 {{#if startDate}}
 										{{#if endDate}}
-			            		<p>{{startDate}} till {{endDate}}</p>
+			            		<p>{{startDate}} 至 {{endDate}}</p>
 			            	{{/if}}
 									{{/if}}
 
@@ -165,22 +165,22 @@
 											{{/each}}
 										{{/if}}
 
-									
+
 			          </div>
 			        </div>
 			      </section>
 			      {{/each}}
 					{{/if}}
 
-					{{#if resume.volunteer.length}}
-						{{#each resume.volunteer}}
+					{{#if volunteer.length}}
+						{{#each volunteer}}
 				      <section class="content">
 				        <div class="row">
 				          <div class="content-cat big-text">
 				          {{#if organization}}
 				          	組織
 				          {{/if}}
-				          
+
 									{{#if startDate}}
 											{{#if endDate}}
 				            		<p>{{startDate}} till {{endDate}}</p>
@@ -189,7 +189,7 @@
 
 				          </div>
 				          <div class="content-text work-listing">
-										
+
 										{{#if summary}}
 					            <p>
 					            	{{summary}}
@@ -206,10 +206,10 @@
 				      </section>
 			      {{/each}}
 					{{/if}}
-					
 
-					{{#if resume.education.length}}
-						{{#each resume.education}}
+
+					{{#if education.length}}
+						{{#each education}}
 							{{#if $first}}
 								<section class="content">
 							{{else}}
@@ -255,8 +255,8 @@
 			      {{/each}}
 		      {{/if}}
 
-					{{#if resume.awards.length}}
-						{{#each resume.awards}}
+					{{#if awards.length}}
+						{{#each awards}}
 				      <section class="content">
 				        <div class="row">
 				          <div class="content-cat big-text">
@@ -288,14 +288,14 @@
 			      {{/each}}
 		      {{/if}}
 
-					{{#if resume.skills.length}}
+					{{#if skills.length}}
 			      <section class="content">
 			        <div class="row">
 			          <div class="content-cat">
 			            工作技能
 			          </div>
 			          <div class="content-text skills-listing">
-			          	{{#each resume.skills}}
+			          	{{#each skills}}
 			            	<p>
 			            	<span class="name">
 			              {{#if name}}
@@ -320,14 +320,14 @@
 			      </section>
 		    	{{/if}}
 
-		    	{{#if resume.interests.length}}
+		    	{{#if interests.length}}
 			      <section class="content">
 			        <div class="row">
 			          <div class="content-cat">
 			            興趣
 			          </div>
 			          <div class="content-text skills-listing">
-			          	{{#each resume.interests}}
+			          	{{#each interests}}
 			            	<p>
 			            	<span class="name">
 			              {{#if name}}
