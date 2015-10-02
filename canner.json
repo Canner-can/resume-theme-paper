@@ -127,7 +127,7 @@
         "city": {
           "~format": "city",
           "~description": "你居住的城市"
-        },
+        }
       },
       "profiles": {
         "network": "輸入一個社群網站名稱；如：twitter, facebook...",
